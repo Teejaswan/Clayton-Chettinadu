@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Rufina:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let review = [
+        {
+          index: 0,
+          feedback:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerumoptio vitae ullam iure placeat sequi, neque, obcaecati distinctio incidunt nulla voluptates provident, assumenda fugiat ex omnisrepudiand",
+          profile: "assets/photos/Avatar.jpg",
+          name: "John Doe",
+          description: "Blogger",
+        },
+        {
+          index: 1,
+          feedback:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerumoptio vitae ullam iure placeat sequi, neque, obcaecati distinctioincidunt nulla voluptates provident, assumenda fugiat ex omnirepudiand",
+          profile: "assets/photos/Avatar.jpg",
+          name: "Doe Jane",
+          description: "Reporter",
+        },
+        {
+          index: 2,
+          feedback:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerumoptio vitae ullam iure placeat sequi, neque, obcaecati distinctioincidunt nulla voluptates provident, assumenda fugiat ex omnisrepudiand",
+          profile: "assets/photos/Avatar.jpg",
+          name: "Dane Joe",
+          description: "Writer",
+        },
+      ];
+      function prev(index) {
+        if (index !== 0) {
+          i = index - 1;
+          document.getElementById("review").innerHTML = `<div>
+          <h3>
+            ${review[i].feedback}
+          </h3>
+        </div>
+        <div class="user-wrapper">
+          <div class="user-review">
+            <img src=${review[i].profile}>
+            <div class="user-name">
+              <h4>${review[i].name}</h4>
+              <span>${review[i].description}</span>
+            </div>
+          </div>
+          <div class="next">
+            <img src="assets/icons/next_arrow.svg" onclick="prev(${i})"/>
+            <span>${i + 1} / ${review.length}</span>
+            <img src="assets/icons/next_arrow.svg" onclick="next(${i})"/>
+          </div>
+        </div>`;
+        } else {
+          return;
+        }
+      }
+      function next(index) {
+        if (index !== 2) {
+          i = index + 1;
+          document.getElementById("review").innerHTML = `<div>
+          <h3>
+            ${review[i].feedback}
+          </h3>
+        </div>
+        <div class="user-wrapper">
+          <div class="user-review">
+            <img src=${review[i].profile}>
+            <div class="user-name">
+              <h4>${review[i].name}</h4>
+              <span>${review[i].description}</span>
+            </div>
+          </div>
+          <div class="next">
+            <img src="assets/icons/next_arrow.svg" onclick="prev(${i},0)"/>
+            <span>${i + 1} / ${review.length}</span>
+            <img src="assets/icons/next_arrow.svg" onclick="next(${i},1)"/>
+          </div>
+        </div>`;
+        } else {
+          return;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="app">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <img src="./assets/icons/NaviOpen.svg" alt="hamburger icon" />
+            </li>
+            <li>
+              <h2>Clayton chettinadu</h2>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <img
+                    src="./assets/icons/instagram.svg"
+                    alt="instagram icon"
+                  />
+                </li>
+                <li>
+                  <img src="./assets/icons/twitter.svg" alt="twitter icon" />
+                </li>
+                <li>
+                  <img src="./assets/icons/facebook.svg" alt="facebook icon" />
+                </li>
+                <li>
+                  <img src="./assets/icons/youtube.svg" alt="youtube icon" />
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <span id="offer"> Lunch Special (Offer Till 06.00 pm) </span>
+          <div>
+            <div class="main-header">
+              <div>
+                <h1>Healthy Eating is important part of lifestyle</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloremque molestiae saepe voluptas eveniet
+                </p>
+              </div>
+              <div>
+                <button>View Menu</button>
+              </div>
+              <img
+                src="./assets/photos/Chicken-Chettinad 1.svg"
+                alt="gravy with rice image"
+                id="header-decor"
+              />
+            </div>
+            <div class="obsolete-header">
+              <span>Scroll..................................</span>
+              <div>
+                <img src="./assets/photos/spices1.png" alt="spice" />
+                <img src="./assets/photos/spices2 (1).png" alt="spice" />
+                <img src="./assets/photos/spices3.png" alt="spice" />
+              </div>
+            </div>
+            <div class="accessory-header">
+              <figure>
+                <img src="./assets/photos/pasta.jpg" alt="dish" />
+                <figcaption>
+                  <h3>Start to plan your diet today</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloremque molestiae saepe voluptas eveniet
+                  </p>
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="./assets/photos/banana-leaf.jpg"
+                  alt="banyan leaf image"
+                />
+                <figcaption>
+                  <p>Served with love and chettinadu traditional Banyan leaf</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="special-menu">
+        <div class="heading">
+          <div>
+            <h3>Our Spl Menu</h3>
+            <p>
+              This is a section of your menu.Give your section a brief
+              description
+            </p>
+          </div>
+          <button>
+            view full menu
+            <svg
+              width="37"
+              height="35"
+              viewBox="0 0 37 35"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.4998 -2.33203L15.2686 0.899218L28.0561 13.7096H0.166504V18.293H28.0561L15.2686 31.1034L18.4998 34.3346L36.8332 16.0013L18.4998 -2.33203Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <span>view</span>
+            <div class="recipe">
+              <h4>Boti Egg</h4>
+              <span>$13.99</span>
+            </div>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+          <div class="menu-item">
+            <span>view</span>
+            <div class="recipe">
+              <h4>Mulai Masala</h4>
+              <span>$13.99</span>
+            </div>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+          <div class="menu-item">
+            <span>view</span>
+            <div class="recipe">
+              <h4>Cada Biriyani</h4>
+              <span>$13.99</span>
+            </div>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+          <div class="menu-item">
+            <span>view</span>
+            <div class="recipe">
+              <h4>Cada 65</h4>
+              <span>$13.99</span>
+            </div>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+        <button>
+          view full menu
+          <svg
+            width="37"
+            height="35"
+            viewBox="0 0 37 35"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.4998 -2.33203L15.2686 0.899218L28.0561 13.7096H0.166504V18.293H28.0561L15.2686 31.1034L18.4998 34.3346L36.8332 16.0013L18.4998 -2.33203Z"
+            />
+          </svg>
+        </button>
+      </section>
+      <section class="excellence">
+        <div>
+          <img src="./assets/icons/chef.png" alt="chef logo" id="chef" />
+          <img src="./assets/photos/cook-dish.jpg" alt="dish" id="dish" />
+          <img src="./assets/photos/left_Leaf.svg" alt="leaf" id="left-leaf" />
+        </div>
+        <div>
+          <h3>Excellent cook</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            voluptas veniam ab? Facere ipsa illo illum optio aspernatur nesciunt
+            excepturi facilis a minus.
+          </p>
+          <img src="./assets/photos/rightleaf.svg" alt="leaf" id="right-leaf" />
+        </div>
+      </section>
+      <section class="features">
+        <div class="feature">
+          <img src="./assets/icons/fish.svg" alt="fish icon" />
+          <h4>premium quality</h4>
+          <p>
+            lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
+            congue arcu
+          </p>
+        </div>
+        <div class="feature">
+          <img src="./assets/icons/carrot.svg" alt="carrot icon" />
+          <h4>Seasonal Vegetables</h4>
+          <p>
+            lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
+            congue arcu
+          </p>
+        </div>
+        <div class="feature">
+          <img src="./assets/icons/lemon.svg" alt="lemon icon" />
+          <h4>fresh fruit</h4>
+          <p>
+            lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
+            congue arcu
+          </p>
+        </div>
+      </section>
+      <section class="showcase">
+        <div class="showcase-item">
+          <div class="showcase-image">
+            <img src="./assets/photos/traditional.jpg" alt="traditional dish" />
+            <span>Traditional</span>
+          </div>
+          <div class="user">
+            <img src="./assets/photos/profile.jpg" alt="profile" />
+            <span class="name">Ashiq Shibin</span>
+            <span class="date">October 17,2021</span>
+            <span class="time">3.33pm</span>
+            <span class="comments">2 comments</span>
+          </div>
+          <div class="contents">
+            <h5>Lorem ipsum dolor sit amet esporengo</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <button class="read-more">
+            read more
+            <img src="./assets/icons/next_arrow.svg" alt="next arrow" />
+          </button>
+        </div>
+        <div class="showcase-item">
+          <div class="showcase-image">
+            <img src="./assets/photos/thali.jpg" alt="Thali dish" />
+            <span> thali </span>
+          </div>
+          <div class="user">
+            <img src="./assets/photos/profile.jpg" alt="profile" />
+            <span class="name">Dianne Russell</span>
+            <span class="date">October 17,2021</span>
+            <span class="time">3.33pm</span>
+            <span class="comments">2 comments</span>
+          </div>
+          <div class="contents">
+            <h5>Lorem ipsum dolor sit amet esporengo</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <button class="read-more">
+            read more
+            <img src="./assets/icons/next_arrow.svg" alt="next arrow" />
+          </button>
+        </div>
+      </section>
+      <section class="reservation">
+        <div class="reservation-header">
+          <h1>Make a Reservation</h1>
+          <p>Get in touch with restaurant</p>
+        </div>
+        <div class="reservation-input">
+          <input type="date" />
+
+          <select>
+            <option>6.00 pm</option>
+          </select>
+          <select>
+            <option>2 Person</option>
+          </select>
+        </div>
+        <div>
+          <button>Book Now</button>
+        </div>
+      </section>
+      <section id="review-wrapper">
+        <div id="review">
+          <div>
+            <h3>
+              " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+              optio vitae ullam iure placeat sequi, neque, obcaecati distinctio
+              incidunt nulla voluptates provident, assumenda fugiat ex omnis
+              repudiand
+            </h3>
+          </div>
+          <div class="user-wrapper">
+            <div class="user-review">
+              <img src="assets/photos/Avatar.jpg" />
+              <div class="user-name">
+                <h4>John Doe</h4>
+                <span>Blogger</span>
+              </div>
+            </div>
+            <div class="next">
+              <img src="assets/icons/next_arrow.svg" onclick="prev(0)" />
+              <span>1 / 3</span>
+              <img src="assets/icons/next_arrow.svg" onclick="next(0)" />
+            </div>
+          </div>
+        </div>
+        <div class="awards">
+          <iframe
+            width="100%"
+            src="https://www.youtube.com/embed?v=D0UnqGm_miA"
+          ></iframe>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="footer-top">
+          <img src="assets/photos/logo.png" alt="Clayton Chettinadu logo" />
+          <div class="contact">
+            <h3>Contact</h3>
+            <p>+1+86 852 346 000</p>
+            <p>
+              199 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Possimus dolor eum
+            </p>
+          </div>
+          <div class="subscribe-wrapper">
+            <h3>Never Miss a Recipe</h3>
+            <div class="subscribe">
+              <input type="email" placeholder="Email Address" />
+              <button>Subscribe</button>
+            </div>
+            <p>Join our subscribers and get best recipe delivered each week</p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>Menu</li>
+            <li>Dine In & Takeaway</li>
+            <li>Catering Service</li>
+            <li>About Us</li>
+          </ul>
+        </nav>
+        <div class="footer-bottom">
+          <img src="assets/photos/Typography.png" alt="Clayton Chettinadu" />
+
+          <ul>
+            <li>
+              <img src="./assets/icons/instagram.svg" alt="instagram icon" />
+            </li>
+            <li>
+              <img src="./assets/icons/twitter.svg" alt="twitter icon" />
+            </li>
+            <li>
+              <img src="./assets/icons/facebook.svg" alt="facebook icon" />
+            </li>
+            <li>
+              <img src="./assets/icons/youtube.svg" alt="youtube icon" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

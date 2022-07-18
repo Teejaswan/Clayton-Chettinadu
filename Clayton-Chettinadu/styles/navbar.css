@@ -1,0 +1,48 @@
+nav {
+  font-size: 2em;
+  padding: 2em;
+  color: white;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+
+nav ul li ul {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+nav ul li ul li {
+  cursor: pointer;
+}
+
+nav h2 {
+  text-transform: uppercase;
+}
+
+nav img {
+  filter: invert(1);
+  aspect-ratio: 1;
+}
+
+@media (max-width: 762px) {
+  nav {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    font-size: 0.5em;
+  }
+}

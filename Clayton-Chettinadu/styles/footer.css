@@ -1,0 +1,152 @@
+.footer {
+  background-color: #10381f;
+  display: flex;
+  flex-direction: column;
+  padding-block: 4em 1.5em;
+  color: white;
+  gap: 2em;
+}
+
+/*footer-top*/
+
+.footer-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-top img {
+  max-width: 10%;
+  height: auto;
+}
+
+.contact {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  max-width: 15%;
+}
+
+.subscribe-wrapper {
+  display: flex;
+  gap: 2em;
+  min-width: 40%;
+  flex-direction: column;
+}
+
+.footer-top h3 {
+  font-size: 2em;
+  font-family: "Rufina", serif;
+}
+
+.subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.subscribe-wrapper p {
+  font-size: 0.75em;
+  font-family: "Lato", sans-serif;
+}
+
+.subscribe input {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.5em;
+  width: 65%;
+  padding: 0.5em 1em;
+}
+
+.subscribe input::placeholder {
+  color: white;
+}
+
+.subscribe button {
+  font-size: 1.5em;
+  font-weight: 600;
+  background-color: #ff9100;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+/*footer-middle*/
+
+.footer nav {
+  padding: 0;
+}
+
+.footer nav ul {
+  display: flex;
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 0.6em;
+  font-family: "Rufina", sans-serif;
+  margin-bottom: 1em;
+  border-bottom: 2px dotted white;
+}
+.footer li {
+  cursor: pointer;
+}
+
+/*footer-bottom*/
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 5%;
+  justify-content: space-between;
+}
+
+.footer-bottom ul {
+  display: flex;
+  justify-content: space-between;
+  filter: invert(1);
+  gap: 1.5em;
+  list-style-type: none;
+  align-items: center;
+}
+
+.footer-bottom > ul img {
+  width: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    max-width: 60%;
+  }
+  .footer {
+    padding: 1.5em 1em;
+  }
+  .footer-top img {
+    max-width: 20%;
+  }
+  .subscribe-wrapper {
+    margin-top: 2em;
+  }
+  .footer h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 573px) {
+  .footer input {
+    font-size: 1em;
+  }
+  .footer button {
+    font-size: 1em;
+  }
+  .footer img {
+    width: 5em;
+  }
+  .footer-bottom ul {
+    gap: 0.5em;
+  }
+}

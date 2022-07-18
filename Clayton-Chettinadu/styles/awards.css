@@ -1,0 +1,134 @@
+#review-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 4em;
+  gap: 5em;
+}
+
+#review-wrapper > div {
+  margin-inline: 10%;
+  display: flex;
+}
+#review {
+  flex-direction: column;
+}
+
+#review-wrapper h3 {
+  width: 85%;
+  font-size: 2.5em;
+  line-height: 1.25em;
+  font-family: "Rufina", serif;
+}
+
+.user-wrapper {
+  display: flex;
+  margin-block-start: 2em;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-review {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25em;
+}
+
+.user-review img {
+  width: 50%;
+}
+
+.user-name h4 {
+  font-family: "Rufina", serif;
+  font-size: 1.75em;
+  white-space: nowrap;
+}
+
+.user-name span {
+  font-family: "Lato", sans-serif;
+  color: gray;
+}
+
+.next {
+  display: flex;
+  gap: 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: "Rufina", serif;
+  align-items: center;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.next img {
+  width: calc(100% / 3);
+  cursor: pointer;
+}
+
+.next img:first-child {
+  transform: rotateY(-180deg);
+}
+
+.awards {
+  background-color: #bdbdbd;
+  aspect-ratio: 16/9;
+  justify-content: center;
+}
+
+.awards h3 {
+  display: grid;
+  place-items: center;
+  font-size: 3em;
+  font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+  #review-wrapper {
+    padding: 1.5em;
+    gap: 1.5em;
+  }
+
+  .next img {
+    width: 1em;
+  }
+
+  #review-wrapper h3 {
+    font-size: 1.5em;
+    width: 100%;
+  }
+
+  .user-review {
+    flex-direction: column;
+  }
+
+  .user-name h4 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 573px) {
+  .user-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  #review-wrapper h3,
+  #review-wrapper h4 {
+    font-size: 1em;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(10vw);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#review div:first-child {
+  animation: slide 1s ease;
+}

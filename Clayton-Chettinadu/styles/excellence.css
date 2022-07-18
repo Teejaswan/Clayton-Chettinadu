@@ -1,0 +1,101 @@
+.excellence {
+  padding: 2em 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  font-size: 2em;
+
+  background-color: #eaecee;
+}
+
+.excellence > div {
+  position: relative;
+  z-index: 1;
+}
+
+.excellence > div:first-child {
+  max-width: 50%;
+}
+
+.excellence > div:last-child {
+  max-width: 35%;
+}
+
+.excellence div:first-child {
+  background-color: white;
+  padding-block-start: 20%;
+}
+
+.excellence > div img:not(#dish) {
+  position: absolute;
+}
+
+.excellence h3 {
+  font-size: clamp(1em, 2em, 2.5em);
+  line-height: 1.1em;
+  font-family: "Rufina", serif;
+  text-align: left;
+}
+
+.excellence p {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(0.5em, 0.75em, 1.5em);
+}
+
+/* Images */
+#chef {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+}
+
+#dish {
+  width: 100%;
+  z-index: 5;
+}
+
+#left-leaf {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: auto;
+}
+
+#right-leaf {
+  width: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .excellence {
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    line-height: 1em;
+  }
+
+  .excellence h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .excellence p {
+    font-size: 0.75em;
+    width: 100%;
+  }
+  .excellence > div {
+    min-width: 100%;
+  }
+  #chef {
+    width: 60%;
+  }
+
+  #left-leaf,
+  #right-leaf {
+    display: none;
+  }
+}
